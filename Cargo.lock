@@ -27,6 +27,35 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "cxx"
+version = "1.0.51"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5f787514a7ca5cc081700331c94f177ac7a7f0e9b97b0f2df1e176f414d782a4"
+dependencies = [
+ "cc",
+ "cxxbridge-flags",
+ "cxxbridge-macro",
+ "link-cplusplus",
+]
+
+[[package]]
+name = "cxxbridge-flags"
+version = "1.0.51"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "13c4c8a0e13a48a978d6c62ab8e9227806434cfbaf2f7e9e336f167792ee0b20"
+
+[[package]]
+name = "cxxbridge-macro"
+version = "1.0.51"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "43a5246573c244d4467906250ec705e90e7ce9db30dc259c7c2a7ba70a35a1a7"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "fstrings"
 version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -53,6 +82,15 @@ name = "libc"
 version = "0.2.99"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a7f823d141fe0a24df1e23b4af4e3c7ba9e5966ec514ea068c93024aa7deb765"
+
+[[package]]
+name = "link-cplusplus"
+version = "1.0.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8f1becd27d473556dc610b8afa1636ef90747b574a84553bc11e82371d5ef2d1"
+dependencies = [
+ "cc",
+]
 
 [[package]]
 name = "mac_address"
@@ -114,6 +152,7 @@ dependencies = [
 name = "ruMACc"
 version = "0.1.0"
 dependencies = [
+ "cxx",
  "fstrings",
  "mac_address",
 ]
