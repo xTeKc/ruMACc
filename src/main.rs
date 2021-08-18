@@ -1,5 +1,6 @@
-use mac::mac;
+mod mac;
+use mac::main_mac;
 
 fn main() {
-    mac::mac();
+    main_mac::mac();
 }
