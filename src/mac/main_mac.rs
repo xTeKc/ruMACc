@@ -1,11 +1,4 @@
-extern crate mac_address;
-
-use mac_address::{
-    get_mac_address,
-    mac_address_by_name,
-};
-
-
+use mac_address::get_mac_address;
 
 pub fn mac_addr() {
     match get_mac_address() {
@@ -16,3 +9,4 @@ pub fn mac_addr() {
         Err(e) => println!("{:?}", e),
     }
 }
+
