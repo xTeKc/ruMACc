@@ -5,6 +5,13 @@ use mac_address::{
     mac_address_by_name,
 };
 
+
+struct Mac {
+    mac_address: Hex,
+    mac_address_name: String,
+}
+
+
 pub fn mac_addr() {
     match get_mac_address() {
         Ok(Some(ma)) => {
