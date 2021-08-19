@@ -5,9 +5,8 @@ use mac_address::{
     mac_address_by_name,
 };
 
-
 struct Mac {
-    mac_address: Hex,
+    mac_address: String,
     mac_address_name: String,
 }
 
