@@ -5,7 +5,6 @@ use mac_address::{
     mac_address_by_name,
 };
 
-
 pub fn mac_addr() {
     match get_mac_address() {
         Ok(Some(ma)) => {
@@ -18,5 +17,11 @@ pub fn mac_addr() {
 
 
 pub fn mac_name() {
-    
+    match mac_address_by_name(name) {
+        Ok(Some(ma)) => {
+            println!("MAC Address of {} = {}", name, ma);
+        }
+        Ok(None) => println!("Interface \"{}\" not found", name),
+        Err(e) => println!("{:?}", e),
+    }
 }
